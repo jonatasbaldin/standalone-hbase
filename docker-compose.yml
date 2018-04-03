@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  hbase-standalone:
+    image: 'jonatasbaldin/hbase-standalone'
+    ports:
+      - "8080:8080"
+      - "8085:8085"
+      - "9090:9090"
+      - "16010:16010"
+      - "16020:16020"
+      - "16030:16030"
+    volumes:
+      - hbase:/data
+
+volumes:
+  hbase:
